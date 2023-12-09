@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.groupBoxCondition = new System.Windows.Forms.GroupBox();
             this.textBoxTask = new System.Windows.Forms.TextBox();
             this.groupBoxInputData = new System.Windows.Forms.GroupBox();
@@ -47,8 +47,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.chartFunction = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBoxCondition.SuspendLayout();
             this.groupBoxInputData.SuspendLayout();
             this.groupBoxOutPutData.SuspendLayout();
@@ -219,6 +219,32 @@
             this.panel3.Size = new System.Drawing.Size(851, 516);
             this.panel3.TabIndex = 6;
             // 
+            // chartFunction
+            // 
+            this.chartFunction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chartFunction.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartFunction.Legends.Add(legend1);
+            this.chartFunction.Location = new System.Drawing.Point(3, 0);
+            this.chartFunction.Name = "chartFunction";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartFunction.Series.Add(series1);
+            this.chartFunction.Size = new System.Drawing.Size(848, 516);
+            this.chartFunction.TabIndex = 1;
+            this.chartFunction.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title1.ForeColor = System.Drawing.Color.DodgerBlue;
+            title1.Name = "Title1";
+            title1.Text = "График функции";
+            this.chartFunction.Titles.Add(title1);
+            // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
@@ -226,32 +252,6 @@
             this.splitter1.Size = new System.Drawing.Size(3, 516);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
-            // 
-            // chartFunction
-            // 
-            this.chartFunction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartFunction.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartFunction.Legends.Add(legend3);
-            this.chartFunction.Location = new System.Drawing.Point(3, 0);
-            this.chartFunction.Name = "chartFunction";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartFunction.Series.Add(series3);
-            this.chartFunction.Size = new System.Drawing.Size(848, 516);
-            this.chartFunction.TabIndex = 1;
-            this.chartFunction.Text = "chart1";
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title3.ForeColor = System.Drawing.Color.DodgerBlue;
-            title3.Name = "Title1";
-            title3.Text = "График функции";
-            this.chartFunction.Titles.Add(title3);
             // 
             // FormMain
             // 
