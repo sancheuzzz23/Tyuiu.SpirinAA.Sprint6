@@ -176,6 +176,8 @@
             // 
             // textBoxOutPutData
             // 
+            this.textBoxOutPutData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxOutPutData.BackColor = System.Drawing.Color.White;
             this.textBoxOutPutData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxOutPutData.Location = new System.Drawing.Point(0, 19);

@@ -74,6 +74,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(371, 13);
             this.textBoxName.TabIndex = 0;
+            this.textBoxName.TabStop = false;
             this.textBoxName.Text = "Вычислить выражение по формуле";
             // 
             // groupBoxInputData

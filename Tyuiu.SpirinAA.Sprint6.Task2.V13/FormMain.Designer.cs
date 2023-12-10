@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBoxCondition = new System.Windows.Forms.GroupBox();
             this.textBoxName2 = new System.Windows.Forms.TextBox();
             this.textBoxName1 = new System.Windows.Forms.TextBox();
             this.groupBoxInputData = new System.Windows.Forms.GroupBox();
+            this.textBoxStartVarX = new System.Windows.Forms.TextBox();
             this.textBoxEndVarX = new System.Windows.Forms.TextBox();
             this.labelStartVarX = new System.Windows.Forms.Label();
             this.labelEndVarX = new System.Windows.Forms.Label();
-            this.textBoxStartVarX = new System.Windows.Forms.TextBox();
             this.buttonInform = new System.Windows.Forms.Button();
             this.buttonDone = new System.Windows.Forms.Button();
             this.groupBoxOutputData = new System.Windows.Forms.GroupBox();
-            this.labelViewFunction = new System.Windows.Forms.Label();
+            this.chartFunction = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewFunction = new System.Windows.Forms.DataGridView();
             this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chartFunction = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelViewFunction = new System.Windows.Forms.Label();
             this.groupBoxCondition.SuspendLayout();
             this.groupBoxInputData.SuspendLayout();
             this.groupBoxOutputData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartFunction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFunction)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxCondition
@@ -73,6 +73,7 @@
             this.textBoxName2.Name = "textBoxName2";
             this.textBoxName2.Size = new System.Drawing.Size(332, 13);
             this.textBoxName2.TabIndex = 0;
+            this.textBoxName2.TabStop = false;
             this.textBoxName2.Text = "Результат вывести в DataGridView и построить график функции.";
             // 
             // textBoxName1
@@ -83,6 +84,7 @@
             this.textBoxName1.Name = "textBoxName1";
             this.textBoxName1.Size = new System.Drawing.Size(276, 13);
             this.textBoxName1.TabIndex = 0;
+            this.textBoxName1.TabStop = false;
             this.textBoxName1.Text = "Протабулировать функцию на заданном промежутке.";
             // 
             // groupBoxInputData
@@ -97,6 +99,13 @@
             this.groupBoxInputData.TabIndex = 1;
             this.groupBoxInputData.TabStop = false;
             this.groupBoxInputData.Text = "Ввод данных";
+            // 
+            // textBoxStartVarX
+            // 
+            this.textBoxStartVarX.Location = new System.Drawing.Point(6, 32);
+            this.textBoxStartVarX.Name = "textBoxStartVarX";
+            this.textBoxStartVarX.Size = new System.Drawing.Size(84, 20);
+            this.textBoxStartVarX.TabIndex = 1;
             // 
             // textBoxEndVarX
             // 
@@ -122,13 +131,6 @@
             this.labelEndVarX.Size = new System.Drawing.Size(69, 13);
             this.labelEndVarX.TabIndex = 0;
             this.labelEndVarX.Text = "Конец шага:";
-            // 
-            // textBoxStartVarX
-            // 
-            this.textBoxStartVarX.Location = new System.Drawing.Point(6, 32);
-            this.textBoxStartVarX.Name = "textBoxStartVarX";
-            this.textBoxStartVarX.Size = new System.Drawing.Size(84, 20);
-            this.textBoxStartVarX.TabIndex = 1;
             // 
             // buttonInform
             // 
@@ -167,14 +169,23 @@
             this.groupBoxOutputData.TabStop = false;
             this.groupBoxOutputData.Text = "Ввод данных";
             // 
-            // labelViewFunction
+            // chartFunction
             // 
-            this.labelViewFunction.AutoSize = true;
-            this.labelViewFunction.Location = new System.Drawing.Point(7, 20);
-            this.labelViewFunction.Name = "labelViewFunction";
-            this.labelViewFunction.Size = new System.Drawing.Size(62, 13);
-            this.labelViewFunction.TabIndex = 1;
-            this.labelViewFunction.Text = "Результат:";
+            chartArea1.Name = "ChartArea1";
+            this.chartFunction.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartFunction.Legends.Add(legend1);
+            this.chartFunction.Location = new System.Drawing.Point(125, 36);
+            this.chartFunction.Name = "chartFunction";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartFunction.Series.Add(series1);
+            this.chartFunction.Size = new System.Drawing.Size(459, 290);
+            this.chartFunction.TabIndex = 3;
+            this.chartFunction.Text = "chart1";
             // 
             // dataGridViewFunction
             // 
@@ -200,23 +211,14 @@
             this.Y.Name = "Y";
             this.Y.Width = 50;
             // 
-            // chartFunction
+            // labelViewFunction
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartFunction.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartFunction.Legends.Add(legend2);
-            this.chartFunction.Location = new System.Drawing.Point(125, 36);
-            this.chartFunction.Name = "chartFunction";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartFunction.Series.Add(series2);
-            this.chartFunction.Size = new System.Drawing.Size(459, 290);
-            this.chartFunction.TabIndex = 3;
-            this.chartFunction.Text = "chart1";
+            this.labelViewFunction.AutoSize = true;
+            this.labelViewFunction.Location = new System.Drawing.Point(7, 20);
+            this.labelViewFunction.Name = "labelViewFunction";
+            this.labelViewFunction.Size = new System.Drawing.Size(62, 13);
+            this.labelViewFunction.TabIndex = 1;
+            this.labelViewFunction.Text = "Результат:";
             // 
             // Form1
             // 
@@ -236,8 +238,8 @@
             this.groupBoxInputData.PerformLayout();
             this.groupBoxOutputData.ResumeLayout(false);
             this.groupBoxOutputData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartFunction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFunction)).EndInit();
             this.ResumeLayout(false);
 
         }

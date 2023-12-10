@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.SpirinAA.Sprint6.Task6.V14
+﻿namespace Tyuiu.SpirinAA.Sprint6.Task7.V23
 {
     partial class FormAbout
     {
@@ -38,7 +38,7 @@
             // pictureBoxAvatar
             // 
             this.pictureBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAvatar.Image")));
-            this.pictureBoxAvatar.Location = new System.Drawing.Point(138, 131);
+            this.pictureBoxAvatar.Location = new System.Drawing.Point(102, 105);
             this.pictureBoxAvatar.Name = "pictureBoxAvatar";
             this.pictureBoxAvatar.Size = new System.Drawing.Size(34, 33);
             this.pictureBoxAvatar.TabIndex = 0;
@@ -48,38 +48,33 @@
             // 
             this.textBoxInfo.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxInfo.Location = new System.Drawing.Point(321, 5);
+            this.textBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxInfo.Location = new System.Drawing.Point(229, 12);
             this.textBoxInfo.Multiline = true;
             this.textBoxInfo.Name = "textBoxInfo";
-            this.textBoxInfo.Size = new System.Drawing.Size(325, 245);
+            this.textBoxInfo.Size = new System.Drawing.Size(313, 192);
             this.textBoxInfo.TabIndex = 1;
             this.textBoxInfo.TabStop = false;
             this.textBoxInfo.Text = resources.GetString("textBoxInfo.Text");
             // 
             // buttonOK
             // 
-            this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonOK.BackgroundImage")));
-            this.buttonOK.Location = new System.Drawing.Point(321, 275);
+            this.buttonOK.Location = new System.Drawing.Point(441, 210);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(323, 35);
+            this.buttonOK.Size = new System.Drawing.Size(101, 39);
             this.buttonOK.TabIndex = 2;
-            this.buttonOK.UseVisualStyleBackColor = false;
+            this.buttonOK.Text = "Ок";
+            this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 322);
+            this.ClientSize = new System.Drawing.Size(554, 261);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.textBoxInfo);
             this.Controls.Add(this.pictureBoxAvatar);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAbout";
             this.Text = "О программе";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
